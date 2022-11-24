@@ -1,132 +1,1264 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('admin.admin')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<div id="content" class="main-content">
+    <div class="container">
+        <div class="page-header">
+            <div class="page-title">
+                <h3>Dashboard</h3>
+            </div>
+        </div>
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.border-gray-200{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.text-center{text-align:center}.text-gray-200{--tw-text-opacity: 1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity: 1;color:rgb(17 24 39 / var(--tw-text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.dark\:bg-gray-900{--tw-bg-opacity: 1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:border-gray-700{--tw-border-opacity: 1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}}
-        </style>
+        <div class="row layout-spacing ">
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+            <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                <div class="widget-content-area  data-widgets br-4">
+                    <div class="widget  t-sales-widget">
+                        <div class="media">
+                            <div class="icon ml-2">
+                                <i class="flaticon-line-chart"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <p class="widget-text mb-0">Sales</p>
+                                <p class="widget-numeric-value">98,225</p>
+                            </div>
+                        </div>
+                        <p class="widget-total-stats mt-2">94% New Sales</p>
+                    </div>
                 </div>
-            @endif
+            </div>
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
+            <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                <div class="widget-content-area  data-widgets br-4">
+                    <div class="widget  t-order-widget">
+                        <div class="media">
+                            <div class="icon ml-2">
+                                <i class="flaticon-cart-bag"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <p class="widget-text mb-0">Orders</p>
+                                <p class="widget-numeric-value">24,017</p>
+                            </div>
+                        </div>
+                        <p class="widget-total-stats mt-2">552 New Orders</p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
+                <div class="widget-content-area  data-widgets br-4">
+                    <div class="widget  t-customer-widget">
+                        <div class="media">
+                            <div class="icon ml-2">
+                                <i class="flaticon-user-11"></i>
                             </div>
+                            <div class="media-body text-right">
+                                <p class="widget-text mb-0">Customers</p>
+                                <p class="widget-numeric-value">92,251</p>
+                            </div>
+                        </div>
+                        <p class="widget-total-stats mt-2">390 New Customers</p>
+                    </div>
+                </div>
+            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                
+                <div class="widget-content-area  data-widgets br-4">
+                    <div class="widget  t-income-widget">
+                        <div class="media">
+                            <div class="icon ml-2">
+                                <i class="flaticon-money"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <p class="widget-text mb-0">Income</p>
+                                <p class="widget-numeric-value">9.5 M</p>
+                            </div>
+                        </div>
+                        <p class="widget-total-stats mt-2">$2.1 M This Week</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-12 layout-spacing">
+                <div class="widget-content-area chat-messages p-0  br-4">
+                    
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <div class="media">
+                                <i class="flaticon-mail-fill icon mr-4"></i>
+                                <div class="media-body">
+                                    <h6 class="">Message</h6>
+                                    <p class="mb-0">3 Unread Message</p>
+                                </div>
+                                <div class="float-right">
+                                    <i class="flaticon-refresh-1 js-refresh mr-1"></i>
+                                    <div class="dropdown custom-dropdown d-inline-block">
+                                        <a class="dropdown-toggle pl-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="flaticon-dots"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="javascript:void(0);">Account</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Profile</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Settings</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                        <div class="chat-body reload-widget-area">
+                            <div class="mCustomScrollbar message-scroll" data-mcs-theme="minimal-dark">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="media">
+                                                        <img src="assets/img/profile-2.jpg" class="rounded-circle mr-4" alt="user">
+                                                        <div class="media-body">
+                                                            <h6 class="usr-name">Andy King</h6>
+                                                            <p class="message">Hey, where have you been?</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right"><p class="meta-time">5 min</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media">
+                                                        <img src="assets/img/profile-3.jpg" class="rounded-circle mr-4" alt="user">
+                                                        <div class="media-body">
+                                                            <h6 class="usr-name">Shaun Park</h6>
+                                                            <p class="message">What up man? Good Morning</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right"><p class="meta-time">7 min</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media">
+                                                        <img src="assets/img/profile-4.jpg" class="rounded-circle mr-4" alt="user">
+                                                        <div class="media-body">
+                                                            <h6 class="usr-name">Nia Hillyer</h6>
+                                                            <p class="message">Hey, why are you not eating anything?</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right"><p class="meta-time">11 min</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media">
+                                                        <img src="assets/img/profile-6.jpg" class="rounded-circle mr-4" alt="user">
+                                                        <div class="media-body">
+                                                            <h6 class="usr-name">Mary McDonald</h6>
+                                                            <p class="message">I never said that for sure</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right"><p class="meta-time">20 min</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media">
+                                                        <img src="assets/img/profile-8.jpg" class="rounded-circle mr-4" alt="user">
+                                                        <div class="media-body">
+                                                            <h6 class="usr-name">Lisa Doe</h6>
+                                                            <p class="message">That's not what I heard from Sammy</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right"><p class="meta-time">25 min</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media">
+                                                        <img src="assets/img/profile-9.jpg" class="rounded-circle mr-4" alt="user">
+                                                        <div class="media-body">
+                                                            <h6 class="usr-name">Alma Clarke</h6>
+                                                            <p class="message">Good Morning Friends</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right"><p class="meta-time">33 min</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
+                            <div class="text-center show-all-msg p-4">
+                                <a href="#">All messages</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                <div class="widget-content-area card-widget p-0  br-4">
+                    <div class="card-1 br-4">
+                        <div class="d-flex justify-content-between mb-5">
+                            <p class="card-title">Team Meeting</p>
+                            <p class="meta-time">12:30 - 2:30 PM</p>
+                        </div>
 
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
 
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
+                            <div class="col-md-12 text-center mt-sm-3">
+                                <button class="btn btn-outline-default btn-rounded">View Details</button>
+                            </div>
+                        </div>
 
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+                        <ul class="list-inline badge-collapsed-img badge-tooltip mt-5 mb-0 text-right mr-3">
+                            <li class="list-inline-item chat-online-usr">
+                                <img data-original-title="Alma Clarke" alt="admin-profile" src="assets/img/profile-7.jpg" class="ml-0 bs-tooltip">
+                            </li>
+                            <li class="list-inline-item chat-online-usr">
+                                <img data-original-title="Alan Green" alt="admin-profile" src="assets/img/profile-8.jpg" class="bs-tooltip">
+                            </li>
+                            <li class="list-inline-item chat-online-usr">
+                                <img data-original-title="Daisy Anderson" alt="admin-profile" src="assets/img/profile-9.jpg" class="bs-tooltip">
+                            </li>
+                            <li class="list-inline-item chat-online-usr">
+                                <img data-original-title="Judy Holmes" alt="admin-profile" src="assets/img/profile-5.jpg" class="bs-tooltip">
+                            </li>
+                        </ul>                                
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-12 col-md-12 col-12 layout-spacing">
+                <div class="statbox widget box order-summary">
+                    <div class="widget-header ">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Order Summary</h4>
+                            </div>                 
                         </div>
                     </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    <div class="widget-content widget-content-area ">
+                        <p class="card-title pl-2 mb-0 mt-1">Total Balance</p>
+                        <div class="d-flex justify-content-between mt-4">
+                            <p class="t-amount mb-2">168,500</p>
+                            <p class="order-rate mt-auto">20% <i class="flaticon-double-check ml-2"></i></p>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-sm-6 mb-sm-4 mb-2">
+                                <div class="media processed">
+                                    <i class="flaticon-cart-bag icon mr-2"></i>
+                                    <div class="media-body">
+                                        <p class="mt-1">Processed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-sm-4 mb-2">
+                                <div class="progress progress-md">
+                                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-sm-4 mb-2">
+                                <div class="media pending">
+                                    <i class="flaticon-danger-2 icon mr-2"></i>
+                                    <div class="media-body">
+                                        <p class="mt-1">Pending</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-sm-4 mb-2">
+                                <div class="progress progress-md">
+                                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-sm-4 mb-2">
+                                <div class="media delivered">
+                                    <i class="flaticon-gift icon mr-2"></i>
+                                    <div class="media-body">
+                                        <p class="mt-1">Delivered</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-sm-4 mb-2">
+                                <div class="progress progress-md">
+                                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+        <div class="row">
+
+            <div class="col-xl-8 col-lg-12 col-md-12 col-12 layout-spacing">
+                <div class="widget-content-area monthly-chart  br-4">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-2 col-12  align-self-center">
+                            <h3>Statistics</h3>
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-sm-10 col-12 mt-sm-0 mt-3">
+                            <ul class="nav justify-content-sm-end justify-content-center monthly-chart-tab nav-pills" id="monthly-chart" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="monthly-chart-weekly-tab" data-toggle="pill" href="#monthly-chart-weekly" role="tab" aria-controls="monthly-chart-weekly" aria-selected="true">Weekly</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="monthly-chart-monthly-tab" data-toggle="pill" href="#monthly-chart-monthly" role="tab" aria-controls="monthly-chart-monthly" aria-selected="true">Monthly</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="monthly-chart-yearly-tab" data-toggle="pill" href="#monthly-chart-yearly" role="tab" aria-controls="monthly-chart-yearly" aria-selected="false">Yearly</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12 mt-3">
+                            <div class="tab-content" id="monthly-chartContent">                                                                            
+                                <div class="tab-pane fade show active" id="monthly-chart-weekly" role="tabpanel" aria-labelledby="monthly-chart-weekly-tab">
+                                    <div class="v-pv-weekly" style="height: 300px; width: 100%; margin-top: 30px;"></div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-12 text-sm-right text-center mb-3 mr-sm-3 px-xl-0">
+                                                <div class="d-flex justify-content-sm-end  justify-content-center">
+                                                    <div class="d-m-visitors data-marker align-self-center"></div>
+                                                    <span class="visitors">Visitors : 9,823</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-12 text-sm-left text-center mb-3 ml-sm-3 px-xl-0">
+                                                <div class="d-flex justify-content-sm-start  justify-content-center">
+                                                    <div class="d-m-page-view data-marker align-self-center"></div>
+                                                    <span class="page-view">Pageviews : 21,655</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="monthly-chart-monthly" role="tabpanel" aria-labelledby="monthly-chart-monthly-tab">
+                                    <div class="v-pv-monthly" style="height: 300px; width: 100%; margin-top: 30px;"></div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-12 text-sm-right text-center mb-3 mr-sm-3 px-xl-0">
+                                                <div class="d-flex justify-content-sm-end  justify-content-center">
+                                                    <div class="d-m-visitors data-marker data-marker-success align-self-center"></div>
+                                                    <span class="visitors">Visitors : 19,823</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-12 text-sm-left text-center mb-3 ml-sm-3 px-xl-0">
+                                                <div class="d-flex justify-content-sm-start  justify-content-center">
+                                                    <div class="d-m-page-view data-marker data-marker-secondary align-self-center"></div>
+                                                    <span class="page-view">Pageviews : 61,655</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="monthly-chart-yearly" role="tabpanel" aria-labelledby="monthly-chart-yearly-tab">
+                                    <div class="v-pv-yearly" style="height: 300px; width: 100%; margin-top: 30px;"></div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-12 text-sm-right text-center mb-3 mr-sm-3 px-xl-0">
+                                                <div class="d-flex justify-content-sm-end  justify-content-center">
+                                                    <div class="d-m-visitors data-marker data-marker-success align-self-center"></div>
+                                                    <span class="visitors">Visitors : 80,823</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-12 text-sm-left text-center mb-3 ml-sm-3 px-xl-0">
+                                                <div class="d-flex justify-content-sm-start  justify-content-center">
+                                                    <div class="d-m-page-view data-marker data-marker-secondary align-self-center"></div>
+                                                    <span class="page-view">Pageviews : 1,21,655</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-12 col-sm-12 col-12 layout-spacing">
+                <div class="statbox widget box">
+                    <div class="widget-header ">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Revenue and Profit</h4>
+                            </div>                 
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area  monthly-profit-chart">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-12 mt-3">
+                                        <div class="s-r mx-auto" style="height: 300px; width: 100%; max-width: 275px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-12 mt-2 mb-2">
+                                <div class="row mt-4">
+                                    <div class="col-lg-6 col-md-6 col-6 px-xl-0 text-right">
+                                        <div class="d-flex justify-content-end">
+                                            <div class="d-m-revenue data-marker align-self-center"></div>
+                                            <span class="page-view mr-sm-3">Revenue</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-6 px-xl-0 text-left">
+                                        <div class="d-flex justify-content-start">
+                                            <div class="d-m-profit data-marker align-self-center"></div>
+                                            <span class="page-view">Profit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-12 layout-spacing">
+                <div class="statbox widget box">
+                    <div class="widget-header ">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>New Products</h4>
+                            </div>                 
+                        </div>
+                    </div>
+
+                    <div class="widget-content-area ">
+
+                        <div class="table-responsive new-products">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="form-check-column text-center">
+                                            <label  for="checkAll" class="new-control new-checkbox new-checkbox-rounded checkbox-primary pb-2">
+                                              <input type="checkbox" id="checkAll" class="new-control-input">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </th>
+                                        <th>Product</th>
+                                        <th>Type</th>
+                                        <th>SKU</th>
+                                        <th class="text-center">Quantity</th>
+                                        <th>Image</th>
+                                        <th class="text-center">Price</th>
+                                        <th class="text-center">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox new-checkbox-rounded checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input chkbox">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Camera</td>
+                                        <td><span class="badge badge-info badge-pill">Simple</span></td>
+                                        <td>#0001</td>
+                                        <td class="text-center">1</td>
+                                        <td>
+                                            <img src="assets/img/large-img-7.jpg" class="img-fluid" alt="img-1" style="border-color: #3862f5;">
+                                        </td>
+                                        <td class="text-center">$848.95</td>
+                                        <td class="text-center">
+                                            <div class="toolbar">
+                                                <div class="toolbar-toggle">...</div>
+                                                <ul class="toolbar-dropdown animated fadeInUp table-controls list-inline">
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="View"><i class="flaticon-view-3"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Edit"><i class="flaticon-edit-5"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Remove"><i class="flaticon-delete-6"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox new-checkbox-rounded checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input chkbox">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Mobile</td>
+                                        <td><span class="badge badge-info badge-pill">Simple</span></td>
+                                        <td>#0002</td>
+                                        <td class="text-center">1</td>
+                                        <td>
+                                            <img src="assets/img/large-img-4.jpg" class="img-fluid" alt="img-1" style="border-color: #07e0c4;">
+                                        </td>
+                                        <td class="text-center">$529.95</td>
+                                        <td class="text-center">
+                                            <div class="toolbar">
+                                                <div class="toolbar-toggle">...</div>
+                                                <ul class="toolbar-dropdown animated fadeInUp table-controls list-inline">
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="View"><i class="flaticon-view-3"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Edit"><i class="flaticon-edit-5"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Remove"><i class="flaticon-delete-6"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox new-checkbox-rounded checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input chkbox">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Windows 10</td>
+                                        <td><span class="badge badge-success badge-pill">Digital</span></td>
+                                        <td>#0003</td>
+                                        <td class="text-center">3</td>
+                                        <td>
+                                            <img src="assets/img/large-img-1.png" class="img-fluid" alt="img-1" style="border-color: #00b1f4;">
+                                        </td>
+                                        <td class="text-center">$1584.00</td>
+                                        <td class="text-center">
+                                            <div class="toolbar">
+                                                <div class="toolbar-toggle">...</div>
+                                                <ul class="toolbar-dropdown animated fadeInUp table-controls list-inline">
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="View"><i class="flaticon-view-3"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Edit"><i class="flaticon-edit-5"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Remove"><i class="flaticon-delete-6"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox new-checkbox-rounded checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input chkbox">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Watch</td>
+                                        <td><span class="badge badge-info badge-pill">Simple</span></td>
+                                        <td>#0004</td>
+                                        <td class="text-center">5</td>
+                                        <td>
+                                            <img src="assets/img/large-img-3.jpg" class="img-fluid" alt="img-1" style="border-color: #f8538d;">
+                                        </td>
+                                        <td class="text-center">$595.99</td>
+                                        <td class="text-center">
+                                            <div class="toolbar">
+                                                <div class="toolbar-toggle">...</div>
+                                                <ul class="toolbar-dropdown animated fadeInUp table-controls list-inline">
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="View"><i class="flaticon-view-3"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Edit"><i class="flaticon-edit-5"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Remove"><i class="flaticon-delete-6"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox new-checkbox-rounded checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input chkbox">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Drone</td>
+                                        <td><span class="badge badge-info badge-pill">Simple</span></td>
+                                        <td>#0005</td>
+                                        <td class="text-center">1</td>                                                <td>
+                                            <img src="assets/img/large-img-5.jpg" class="img-fluid" alt="img-1" style="border-color: #ffbb44;">
+                                        </td>
+                                        <td class="text-center">$58.00</td>
+                                        <td class="text-center">
+                                            <div class="toolbar">
+                                                <div class="toolbar-toggle">...</div>
+                                                <ul class="toolbar-dropdown animated fadeInUp table-controls list-inline">
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="View"><i class="flaticon-view-3"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Edit"><i class="flaticon-edit-5"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Remove"><i class="flaticon-delete-6"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox new-checkbox-rounded checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input chkbox">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Sunglasses</td>
+                                        <td><span class="badge badge-secondary badge-pill">Bundled</span></td>
+                                        <td>#0006</td>
+                                        <td class="text-center">6</td>
+                                        <td>
+                                            <img src="assets/img/large-img-2.jpg" class="img-fluid" alt="img-1" style="border-color: #25d5e4;">
+                                        </td>
+                                        <td class="text-center">$123.00</td>
+                                        <td class="text-center">
+                                            <div class="toolbar">
+                                                <div class="toolbar-toggle">...</div>
+                                                <ul class="toolbar-dropdown animated fadeInUp table-controls list-inline">
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="View"><i class="flaticon-view-3"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Edit"><i class="flaticon-edit-5"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a href="javascript:void(0);" class="bs-tooltip" data-original-title="Remove"><i class="flaticon-delete-6"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination-section">
+                            <ul class="pagination pagination-style-1 pagination-rounded justify-content-end mt-3 mb-3">
+                                <li><a href="javascript:void(0);">«</a></li>
+                                <li><a href="javascript:void(0);">1</a></li>
+                                <li><a href="javascript:void(0);">2</a></li>
+                                <li><a href="javascript:void(0);">3</a></li>
+                                <li><a href="javascript:void(0);">4</a></li>
+                                <li><a href="javascript:void(0);">5</a></li>
+                                <li><a href="javascript:void(0);">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-12 col-md-12 col-12 layout-spacing">
+                <div class="widget-content-area raised-tickets p-0  h-100 br-4">
+                    <div class=" table-header">
+                        <div class="row">
+                            <div class="col-6 pr-0">
+                                <p class="mb-0">Tickets</p>
+                            </div>
+                            <div class="col-6 pl-0 text-right">
+                                <p class="mb-0">Status</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <img src="assets/img/profile-1.jpg" class="rounded-circle mr-4" alt="user">
+                                            <div class="media-body">
+                                                <h6 class="usr-name">Shaun Park</h6>
+                                                <p class="meta-info">
+                                                    <i class="flaticon-stopwatch-1 mr-1"></i>
+                                                    <span class="meta-date">9 Jan 2019 | Tue - </span>
+                                                    <span class="meta-time">9:00 am</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="action text-right">
+                                        <i class="flaticon-danger-2 mb-2 t-inprogress bs-tooltip" data-placement="top" title="Pending"></i>
+                                        <i class="flaticon-checked-1 mb-2 bs-tooltip" data-placement="top" title="Success"></i>
+                                        <i class="flaticon-cancel-circle mb-2 bs-tooltip" data-placement="top" title="Close"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <img src="assets/img/profile-2.jpg" class="rounded-circle mr-4" alt="user">
+                                            <div class="media-body">
+                                                <h6 class="usr-name">Nia Hillyer</h6>
+                                                <p class="meta-info">
+                                                    <i class="flaticon-stopwatch-1 mr-1"></i>
+                                                    <span class="meta-date">5 Jan 2019 | Mon - </span>
+                                                    <span class="meta-time">2:00 pm</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="action text-right">
+                                        <i class="flaticon-danger-2 mb-2 bs-tooltip" data-placement="top" title="Pending"></i>
+                                        <i class="flaticon-checked-1 mb-2 t-solved bs-tooltip" data-placement="top" title="Success"></i>
+                                        <i class="flaticon-cancel-circle mb-2 bs-tooltip" data-placement="top" title="Close"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <img src="assets/img/profile-4.jpg" class="rounded-circle mr-4" alt="user">
+                                            <div class="media-body">
+                                                <h6 class="usr-name">Mary McDonald</h6>
+                                                <p class="meta-info">
+                                                    <i class="flaticon-stopwatch-1 mr-1"></i>
+                                                    <span class="meta-date">3 Jan 2019 | Mon - </span>
+                                                    <span class="meta-time">10:00 am</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="action text-right">
+                                        <i class="flaticon-danger-2 mb-2 bs-tooltip" data-placement="top" title="Pending"></i>
+                                        <i class="flaticon-checked-1 mb-2 bs-tooltip" data-placement="top" title="Success"></i>
+                                        <i class="flaticon-cancel-circle mb-2 t-not-solved bs-tooltip" data-placement="top" title="Close"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <img src="assets/img/profile-3.jpg" class="rounded-circle mr-4" alt="user">
+                                            <div class="media-body">
+                                                <h6 class="usr-name">Andy King</h6>
+                                                <p class="meta-info">
+                                                    <i class="flaticon-stopwatch-1 mr-1"></i>
+                                                    <span class="meta-date">29 Dec 2018 | Fri - </span>
+                                                    <span class="meta-time">03:00 pm</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="action text-right">
+                                        <i class="flaticon-danger-2 mb-2 bs-tooltip" data-placement="top" title="Pending"></i>
+                                        <i class="flaticon-checked-1 mb-2 t-solved bs-tooltip" data-placement="top" title="Success"></i>
+                                        <i class="flaticon-cancel-circle mb-2 bs-tooltip" data-placement="top" title="Close"></i>
+                                    </td>
+                                </tr>                                    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-12 col-md-12 col-12 layout-spacing">
+                <div class="widget-content-area task-container  p-0 h-100 br-4">
+                    <div class="task-list">                                
+                        <div class="task-header">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 mb-4 mb-sm-0">
+                                    <h6 class="mt-3 mb-0">Today's Task</h6>
+                                </div>
+                                <div class="col-md-7 col-sm-7 text-sm-right">
+                                    <button class="btn btn-gradient-warning btn-rounded">Create Task</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="task-item">
+                                                    <h6 class="task-title mb-3">Metting Scheduled with</h6>
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-5.jpg" class="rounded-circle mb-2" alt="user">
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-6.jpg" class="rounded-circle mb-2" alt="user">
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-7.jpg" class="rounded-circle mb-2" alt="user">
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-8.jpg" class="rounded-circle mb-2" alt="user">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="action text-right">
+                                                <i class="flaticon-edit-fill bs-tooltip" data-placement="top" title="Edit"></i>
+                                                <i class="flaticon-delete-can-fill-2 ml-2 bs-tooltip" data-placement="top" title="Delete"></i>
+                                                <br/>
+                                                <p class="meta-info">
+                                                    <span class="meta-time">03:20 PM Wed,</span>
+                                                    <span class="meta-date">16 Jan 2019</span>
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="task-item">
+                                                    <h6 class="task-title mb-3">Give purchase report to</h6>
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-9.jpg" class="rounded-circle mb-1" alt="user">
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <div class="txt-profile txt-profile-success mb-1">G</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="action text-right">
+                                                <i class="flaticon-edit-fill bs-tooltip" data-placement="top" title="Edit"></i>
+                                                <i class="flaticon-delete-can-fill-2 ml-2 bs-tooltip" data-placement="top" title="Delete"></i>
+                                                <br/>
+                                                <p class="meta-info">
+                                                    <span class="meta-time">11:00 AM Wed,</span>
+                                                    <span class="meta-date">16 Jan 2019</span>
+                                                </p>
+                                            </td>
+                                        </tr> 
+
+                                        <tr>
+                                            <td>
+                                                <div class="task-item">
+                                                    <h6 class="task-title mb-3">Receive Shipment</h6>
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-10.jpg" class="rounded-circle mb-2" alt="user">
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-3.jpg" class="rounded-circle mb-2" alt="user">
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-11.jpg" class="rounded-circle mb-2" alt="user">
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <img src="assets/img/profile-12.jpg" class="rounded-circle mb-2" alt="user">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="action text-right">
+                                                <i class="flaticon-edit-fill bs-tooltip" data-placement="top" title="Edit"></i>
+                                                <i class="flaticon-delete-can-fill-2 ml-2 bs-tooltip" data-placement="top" title="Delete"></i>
+                                                <br/>
+                                                <p class="meta-info">
+                                                    <span class="meta-time">09:00 AM Wed,</span>
+                                                    <span class="meta-date">16 Jan 2019</span>
+                                                </p>
+                                            </td>
+                                        </tr>                                   
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center action-button">
+                                <button class="btn btn-light-success mb-4 mt-3 box-shadow-none">View All Tasks</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-12 col-md-12 col-12 layout-spacing">
+                <div class="widget-content-area event-calendar p-0 br-4">
+                    <div class="calendar"></div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-12 col-md-12 col-12 layout-spacing">
+               <div class="top-searches widget-content-area p-0 widget-content-container  h-100 br-4">
+                    <div class="col-lg-12 col-md-12 col-12 map-title">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <p class="mb-4 mt-2">Top Searches</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-content">
+                        <div id="world-map" style="height: 435px; max-height: 100%;"></div>
+                        <div class="world-map-section">
+                            <div class="">
+                                <div class="table-responsive top-search-scroll">
+                                    <table class="table table-highlight-head">
+                                        <thead>
+                                            <tr>
+                                                <th class="align-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="d-m-data-1 data-marker align-self-center"></div>
+                                                        <span class="page-view mr-sm-3">USA</span>
+                                                    </div>
+                                                </th>
+                                                <th class="align-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="d-m-data-2 data-marker align-self-center"></div>
+                                                        <span class="page-view mr-sm-3">Australia</span>
+                                                    </div>
+                                                </th>
+                                                <th class="align-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="d-m-data-3 data-marker align-self-center"></div>
+                                                        <span class="page-view mr-sm-3">Spain</span>
+                                                    </div>
+                                                </th>
+                                                <th class="align-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="d-m-data-4 data-marker align-self-center"></div>
+                                                        <span class="page-view mr-sm-3">France</span>
+                                                    </div>
+                                                </th>
+                                                <th class="align-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="d-m-data-5 data-marker align-self-center"></div>
+                                                        <span class="page-view mr-sm-3">India</span>
+                                                    </div>
+                                                </th>
+                                                <th class="align-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="d-m-data-6 data-marker align-self-center"></div>
+                                                        <span class="page-view mr-sm-3">Other</span>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="align-center data-value-1">55%</td>
+                                                <td class="align-center data-value-2">30%</td>
+                                                <td class="align-center data-value-3">10%</td>
+                                                <td class="align-center data-value-4">4%</td>
+                                                <td class="align-center data-value-5">0.6%</td>
+                                                <td class="align-center data-value-6">0.4%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-12 layout-spacing">
+                <div class="statbox widget box box-shadow latest-invoice ">
+                    <div class="widget-header ">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Latest Invoice</h4>
+                            </div>                 
+                        </div>
+                    </div>
+                    <div class="widget-content-area ">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="form-check-column text-center">
+                                            <label for="invoiceAll" class="new-control new-checkbox checkbox-primary pb-2">
+                                              <input type="checkbox" id="invoiceAll" class="new-control-input">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </th>
+                                        <th>Product</th>
+                                        <th>Invoice no.</th>
+                                        <th>Date</th>
+                                        <th class="text-center">Amount</th>
+                                        <th class="text-center">Status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input invoicechk">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Camera</td>
+                                        <td>#0001</td>
+                                        <td>16 Jan</td>
+                                        <td class="align-center">$15,202</td>
+                                        <td  class="text-center">
+                                            <span class="badge badge-pills outline-badge-secondary">In Progress</span>
+                                        </td>
+                                        <td>
+                                            <i class="flaticon-view-1 bs-tooltip" data-placement="top" data-original-title="View"></i>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input invoicechk">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Iphone</td>
+                                        <td>#0002</td>
+                                        <td>16 Jan</td>
+                                        <td class="align-center">$650</td>
+                                        <td  class="text-center">
+                                            <span class="badge badge-pills outline-badge-success">Approved</span>
+                                        </td>
+                                        <td>
+                                            <i class="flaticon-view-1 bs-tooltip" data-placement="top" data-original-title="View"></i>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input invoicechk">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Headphone</td>
+                                        <td>#0003</td>
+                                        <td>16 Jan</td>
+                                        <td class="align-center">$25</td>
+                                        <td  class="text-center">
+                                            <span class="badge badge-pills outline-badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <i class="flaticon-view-1 bs-tooltip" data-placement="top" data-original-title="View"></i>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input invoicechk">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Speakers</td>
+                                        <td>#0004</td>
+                                        <td>16 Jan</td>
+                                        <td class="align-center">$100</td>
+                                        <td  class="text-center">
+                                            <span class="badge badge-pills outline-badge-secondary">In Progress</span>
+                                        </td>
+                                        <td>
+                                            <i class="flaticon-view-1 bs-tooltip" data-placement="top" data-original-title="View"></i>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input invoicechk">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Watch</td>
+                                        <td>#0005</td>
+                                        <td>16 Jan</td>
+                                        <td class="align-center">$85</td>
+                                        <td  class="text-center">
+                                            <span class="badge badge-pills outline-badge-success">Approved</span>
+                                        </td>
+                                        <td>
+                                            <i class="flaticon-view-1 bs-tooltip" data-placement="top" data-original-title="View"></i>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="form-check-column text-center">
+                                            <label class="new-control new-checkbox checkbox-primary pb-2">
+                                              <input type="checkbox" class="new-control-input invoicechk">
+                                              <span class="new-control-indicator mt-2"></span><span class="invisible">s</span>
+                                            </label>
+                                        </td>
+                                        <td>Sunglasses</td>
+                                        <td>#0006</td>
+                                        <td>16 Jan</td>
+                                        <td class="align-center">$19</td>
+                                        <td  class="text-center">
+                                            <span class="badge badge-pills outline-badge-danger">Cancelled</span>
+                                        </td>
+                                        <td>
+                                            <i class="flaticon-view-1 bs-tooltip" data-placement="top" data-original-title="View"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-12 layout-spacing">
+                <div class="widget-content-area p-0 card-widget-content ">
+                    <div id="user-profile-card-1" class="card br-4" style="">
+                        <div class="card-body p-0">
+                            <div class="usr-img-meta mx-auto">
+                                <img alt="admin-profile" src="assets/img/profile-card-1.jpg" class="rounded-circle">
+                            </div>
+                            <div class="usr-info-meta text-center">
+                                <p class="usr-name mb-0">Sean Freeman</p>
+                                <p class="usr-occupation">Designer</p>
+                                <button class="btn btn-secondary btn-rounded">View Profile</button>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-lg-12 text-center mt-4">                                        
+                                    <button class="btn btn-light-info rounded-circle mb-2 mr-2"><i class="flaticon-twitter-logo flaticon-circle-p"></i>
+                                    </button>
+                                    <button class="btn btn-light-success rounded-circle mb-2 mr-2"><i class="flaticon-behance-logo flaticon-circle-p"></i>
+                                    </button>
+                                    <button class="btn btn-light-primary rounded-circle mb-2 mr-2"><i class="flaticon-facebook-logo flaticon-circle-p"></i>
+                                    </button>
+                                    <button class="btn btn-light-warning rounded-circle mb-2 mr-2"><i class="flaticon-dribbble-bold flaticon-circle-p"></i>
+                                    </button>
+                                    <button class="btn btn-light-danger rounded-circle mb-2 mr-2"><i class="flaticon-youtube-logo flaticon-circle-p"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-5 col-lg-12 col-md-12 col-12 layout-spacing">
+                <div class="widget-content-area page-views p-0  br-4">
+                    <ul class="nav nav-pills py-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Daily</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Weekly</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Monthly</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <div class="daily">
+                                        <p class="d-count mb-0">5,067</p>
+                                        <p>Total Page Views</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div id="daily"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <div class="weekly">
+                                        <p class="w-count mb-0">25,067</p>
+                                        <p>Total Page Views</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div id="weekly"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <div class="month">
+                                        <p class="m-count mb-0">276,097</p>
+                                        <p>Total Page Views</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div id="month"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-7 col-lg-12 col-md-12 col-12 layout-spacing">
+                <div class="row">
+
+                    <div class="col-sm-4 col-12 mb-sm-0 mb-4">
+                        <div class="widget-content-area social-likes text-center p-0  br-4">
+                            <div class="card facebook">
+                                <div class="icon mb-4">
+                                    <i class="flaticon-facebook-logo"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Facebook</h5>
+                                    <p>13K Followers</p>
+                                </div>
+                                <div class="card-btn-section">
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-12 mb-sm-0 mb-4">
+                        <div class="widget-content-area social-likes text-center p-0  br-4">
+                            <div class="card dribbble">
+                                <div class="icon mb-4">
+                                    <i class="flaticon-dribbble-bold"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Dribbble</h5>
+                                    <p>4K Followers</p>
+                                </div>
+                                <div class="card-btn-section">
+                                    <p>Check Work</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-12 mb-sm-0 mb-4">
+                        <div class="widget-content-area social-likes text-center p-0  br-4">
+                            <div class="card twitter">
+                                <div class="icon mb-4">
+                                    <i class="flaticon-twitter-logo"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Twitter</h5>
+                                    <p>7.2K Followers</p>
+                                </div>
+                                <div class="card-btn-section">
+                                    <p>Read Tweets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@endsection
