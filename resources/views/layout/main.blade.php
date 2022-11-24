@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Broccoli - Organic Food HTML Template</title>
+    <title>Suryamart</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,57 +36,6 @@
     <!-- HEADER AREA START (header-5) -->
     <header class="ltn__header-area ltn__header-5 ltn__header-transparent-- gradient-color-4---">
         <!-- ltn__header-top-area start -->
-        <div class="ltn__header-top-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="ltn__top-bar-menu">
-                            <ul>
-                                <li><a href="locations.html"><i class="icon-placeholder"></i> 15/A, Nest Tower, NYC</a></li>
-                                <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i> info@webmail.com</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="top-bar-right text-right">
-                            <div class="ltn__top-bar-menu">
-                                <ul>
-                                    <li>
-                                        <!-- ltn__language-menu -->
-                                        <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
-                                            <ul>
-                                                <li><a href="#" class="dropdown-toggle"><span class="active-currency">English</span></a>
-                                                    <ul>
-                                                        <li><a href="#">Arabic</a></li>
-                                                        <li><a href="#">Bengali</a></li>
-                                                        <li><a href="#">Chinese</a></li>
-                                                        <li><a href="#">English</a></li>
-                                                        <li><a href="#">French</a></li>
-                                                        <li><a href="#">Hindi</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- ltn__social-media -->
-                                        <div class="ltn__social-media">
-                                            <ul>
-                                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-
-                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- ltn__header-top-area end -->
 
         <!-- ltn__header-middle-area start -->
@@ -96,7 +45,7 @@
                     <div class="col">
                         <div class="site-logo-wrap">
                             <div class="site-logo">
-                                <a href="index.html"><img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/logo.png') }}" alt="Logo"></a>
+                                <a href="index.html"><img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/smkkreativ.png') }}" alt="Logo"></a>
                             </div>
                         </div>
                     </div>
@@ -273,12 +222,6 @@
                             </ul>
                         </div>
                         <!-- mini-cart -->
-                        <div class="mini-cart-icon">
-                            <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
-                                <i class="icon-shopping-cart"></i>
-                                <sup>2</sup>
-                            </a>
-                        </div>
                         <!-- mini-cart -->
                         <!-- Mobile Menu Button -->
                         <div class="mobile-menu-toggle d-xl-none">
@@ -655,7 +598,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h1 class="section-title white-color">Top Categories</h1>
+                        <h1 class="section-title white-color">Kategori Teratas</h1>
                     </div>
                 </div>
             </div>
@@ -749,7 +692,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h1 class="section-title">Our Products</h1>
+                        <h1 class="section-title">Produk Kita</h1>
                     </div>
                     <div class="ltn__tab-menu ltn__tab-menu-2 ltn__tab-menu-top-right-- text-uppercase text-center">
                         <div class="nav">
@@ -3601,7 +3544,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h1 class="section-title">Featured Products</h1>
+                        <h1 class="section-title">Produk Pilihan</h1>
                     </div>
                 </div>
             </div>
@@ -4016,7 +3959,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h1 class="section-title white-color---">Leatest Blog</h1>
+                        <h1 class="section-title white-color---">Blog Terbaru</h1>
                     </div>
                 </div>
             </div>
@@ -4365,16 +4308,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="ltn__copyright-design clearfix">
-                            <p>All Rights Reserved @ Company <span class="current-year"></span></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12 align-self-center">
-                        <div class="ltn__copyright-menu text-right">
-                            <ul>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Claim</a></li>
-                                <li><a href="#">Privacy & Policy</a></li>
-                            </ul>
+                            <p>Copyright © 2022 at SMK Muhammadiyah 1 Genteng. Supported by Team Zoe <span class="current-year"></span></p>
                         </div>
                     </div>
                 </div>
@@ -4468,10 +4402,9 @@
                                             <div class="ltn__social-media">
                                                 <ul>
                                                     <li>Share:</li>
-                                                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                                                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                                    <li><a href="https://www.facebook.com/smkmuhigenteng" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="https://www.youtube.com/channel/UCJOjJCbfEcApeNYmDJ4tCCw"><i class="fab fa-youtube"></i></a></li>
+                                                    <li><a href="https://www.instagram.com/muhi.ig/?next=%2F&hl=id" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 
                                                 </ul>
                                             </div>
