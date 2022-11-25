@@ -35,8 +35,6 @@
 
     <!-- HEADER AREA START (header-5) -->
     <header class="ltn__header-area ltn__header-5 ltn__header-transparent-- gradient-color-4---">
-        <!-- ltn__header-top-area start -->
-        <!-- ltn__header-top-area end -->
 
         <!-- ltn__header-middle-area start -->
         <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white plr--9---">
@@ -183,7 +181,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">Contact</a></li>
-                                        <li class="special-link"><a href="contact.html">GET A QUOTE</a></li>
+
                                     </ul>
                                 </div>
                             </nav>
