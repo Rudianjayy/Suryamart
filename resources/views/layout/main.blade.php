@@ -52,10 +52,10 @@
                             <nav>
                                 <div class="ltn__main-menu">
                                     <ul>
-                                        <li class="menu-icon"><a href="#">Home</a>
+                                        <li class="menu-icon"><a href="#">Beranda</a>
                                             <ul class="sub-menu menu-pages-img-show ltn__sub-menu-col-2---">
                                                 <li>
-                                                    <a href="index.html">Home Style 01</a>
+                                                    <a href="index.html">Sejarah Suryamart</a>
                                                     <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/home-demos/home-1.jpg') }}" alt="#">
                                                 </li>
                                                 <li>
@@ -428,6 +428,7 @@
             </div>
             <div class="ltn__social-media-2">
                 <ul>
+                    <li><a href="#"></a></li>
                     <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>

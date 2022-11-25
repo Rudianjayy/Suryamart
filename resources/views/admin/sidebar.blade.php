@@ -30,10 +30,10 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="produk" data-parent="#accordionExample">
                             <li>
-                                <a href="ecommerce_dashboard.html"> aa</a>
+                                <a href="ecommerce_dashboard.html">Produk</a>
                             </li>
                             <li>
-                                <a href="ecommerce_orders.html"> Orders </a>
+                                <a href="ecommerce_orders.html">Favorit</a>
                             </li>
                             <li>
                                 <a href="ecommerce_product.html"> Products </a>
