@@ -18,5 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/landing', [LandingController::class, 'landing'])->name('landing');
+Route::get('/', [LandingController::class, 'landing'])->name('landing');
+
+Route::get('/katalog', [LandingController::class, 'katalog'])->name('katalog');
+
+Route::get('/hubungikami', [LandingController::class, 'hubungikami'])->name('hubungikami');
+
+Route::get('/promo', [LandingController::class, 'promo'])->name('promo');
 
