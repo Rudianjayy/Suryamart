@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class LandingController extends Controller
 {
     public function landing() {
-        return view('layout.main');
+        return view('landingsurya.landing');
     }
+   
 }
+
+
+                 

@@ -19,7 +19,7 @@
 >>> TABLE OF CONTENTS:
 ===============================================================
 # Google fonts
-# Gutter Code 
+# Gutter Code
 # Normalize
 # Typography
 # Custom Class
@@ -38,7 +38,7 @@
 # Galleries
 # Unit test
 # ScrollUp
-# Owl Carousel 
+# Owl Carousel
 # Slick Slider
 # Background Overlay
 # Scrollbar
@@ -64,7 +64,7 @@ font-family: 'Nunito Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
 */
 /* ====================================================
-    Gutter Code 
+    Gutter Code
 ==================================================== */
 .ltn__no-gutter > [class*='col-'] {
   /* No padding only for child columns */
@@ -104,7 +104,7 @@ font-family: 'Roboto', sans-serif;
     padding-left: 8px; } }
 
 /* ----------------------------------------------------
-    Normalize  
+    Normalize
 ---------------------------------------------------- */
 :root {
   --ltn__primary-color: #071c1f;
@@ -1104,7 +1104,7 @@ ul {
     color: var(--white); }
 
 /* ----------------------------------------------------
-    Owl Carousel 
+    Owl Carousel
 ---------------------------------------------------- */
 .owl-dots {
   display: block;
@@ -1528,10 +1528,10 @@ ul {
   opacity: 0.8; }
 
 .bg-overlay-theme-black-90:before {
-  opacity: 0.9; }
+  opacity: 0.5; }
 
 /* ----------------------------------------------
-  Scrollbar 
+  Scrollbar
 ---------------------------------------------- */
 .ltn__scrollbar {
   overflow-y: auto; }
@@ -5263,9 +5263,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   top: 50%;
   left: 50%;
   width: 50px;
-  height: 60px;
-  margin-top: -2px;
-  margin-left: -2px;
+  height: 54px;
+  margin-top: -7px;
+  margin-left: -10px;
   cursor: pointer;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0); }
@@ -5459,7 +5459,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 10px 0 30px; }
+    margin: -6px 0 8px; }
   .ltn__header-4 .ltn__header-options,
   .ltn__header-5 .ltn__header-options {
     margin-left: 0;
@@ -7447,7 +7447,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 # Common CSS
 # Section title
 # Category Area
-# Feature Area 
+# Feature Area
 # Countdown Area
 # Blog Area
 # Blog Details
@@ -7476,12 +7476,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 # Service Area
 # Call To Action
 # Elements Area
-# Service Form 
+# Service Form
 # Get A Quote Form
 # Car Dealer Form
 # Video Area
 # Brand Logo
-# Progress Bar 
+# Progress Bar
 # Our Journey Area
 # Google Map Locations Area
 # Team Details
@@ -7848,7 +7848,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding: 30px 0 5px; } }
 
 /* ----------------------------------------------------
-    Feature Area 
+    Feature Area
 ---------------------------------------------------- */
 .ltn__feature-item {
   padding: 40px 25px 10px;
@@ -10980,7 +10980,7 @@ input.cart-plus-minus-box {
   margin: 0; }
 
 /* ----------------------------------------------------
-    Service Form 
+    Service Form
 ---------------------------------------------------- */
 .ltn__service-form-box {
   margin: 0;
@@ -11303,7 +11303,7 @@ input.cart-plus-minus-box {
       transform: scale(1.1); }
 
 /* ----------------------------------------------------
-    Progress Bar 
+    Progress Bar
 ---------------------------------------------------- */
 .ltn__progress-bar-wrap {
   margin-bottom: 50px; }

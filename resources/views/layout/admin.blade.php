@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- Mirrored from designreset.com/preview-equation/default-light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 08:22:50 GMT -->
-@include('admin.css')
+@include('layout.css')
 
 <body class="default-sidebar">
     <div id="eq-loader">
@@ -30,7 +30,7 @@
     <!-- Tab Mobile View Header -->
 
     <!--  BEGIN NAVBAR  -->
-    @include('admin.header')
+    @include('layout.header')
     <!--  END NAVBAR  -->
 
     <!--  BEGIN MAIN CONTAINER  -->
@@ -41,7 +41,7 @@
 
         <!--  BEGIN SIDEBAR  -->
 
-        @include('admin.sidebar')
+        @include('layout.sidebar')
 
         <!--  END SIDEBAR  -->
 
@@ -979,7 +979,7 @@
         </div>
     </aside>
     <!--  END CONTROL SIDEBAR  -->
-    @include('admin.script')
+    @include('layout.script')
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 </body>
