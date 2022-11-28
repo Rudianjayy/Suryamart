@@ -49,7 +49,7 @@
                             <a href="/profilsekolahadmin">Slider</a>
                         </li>
                         <li>
-                            <a href="/visimisiadmin"> Sejarah Suryamart </a>
+                            <a href="/adminsejarah"> Sejarah Suryamart </a>
                         </li>
                         <li>
                             <a href="/identitas_admin"> Kategori Teratas</a>
@@ -58,7 +58,7 @@
                             <a href="/fasilitasadmin"> Team Suryamart </a>
                         </li>
                         <li>
-                            <a href="/fasilitasadmin"> Galeri Suryamart </a>
+                            <a href="/admingaleri"> Galeri Suryamart </a>
                         </li>
                         <li>
                             <a href="/fasilitasadmin"> Footer </a>
