@@ -1,4 +1,4 @@
-@extends('admin.admin')
+@extends('layout.admin')
 @push('css')
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
     <title>Data Dosen - Laravel</title>
@@ -9,7 +9,7 @@
 @section('content')
 
     <head>
-        @include('admin.css')
+        @include('layout.css')
     </head>
 
     <body>
@@ -99,7 +99,7 @@
 
 
     </body>
-    @include('admin.script')
+    @include('layout.script')
     <script>
         @if (Session::has('success'))
             toastr.success("{{ Session::get('success') }}")

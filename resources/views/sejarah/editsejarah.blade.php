@@ -1,8 +1,8 @@
-@extends('admin.admin')
+@extends('layout.main')
 
 @section('content')
 <head>
-    @include('admin.css')
+    @include('layout.css')
 </head>
 
     <body>
@@ -19,7 +19,7 @@
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi">{!! $data->deskripsi !!}</textarea>
+                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi">{{ $data->deskripsi }}</textarea>
 
                                     @error('deskripsi')
                                         <div class="alert alert-danger">{{ $message }}</div>
@@ -36,7 +36,7 @@
 
         <!-- Optional JavaScript; choose one of the two! -->
 
-        @include('admin.script')
+        @include('layout.script')
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

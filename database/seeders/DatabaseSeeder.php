@@ -3,7 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +23,17 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $suryamart = [
+            [
+                'name' => 'Suryamart',
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make ('adminsuryamart'),
+                'role' => 'admin',
+                'remember_token' => Str::random (60),
+            ],
+        ];
+        User::insert($suryamart);
+
     }
 }

@@ -130,7 +130,7 @@
                         <div class="col header-menu-column menu-color-white">
                             <div class="header-menu d-none d-xl-block">
                                 <nav>
-                                    @include('layout.navbar')
+                                    @include('layout.admin')
                                 </nav>
                             </div>
                         </div>
@@ -571,8 +571,8 @@
                                 <div class="ltn__social-media">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -789,7 +789,7 @@
 
 
         <!-- FOOTER AREA START -->
-     @include('layout.footer')
+     @include('layout.admin')
         <!-- FOOTER AREA END -->
 
         <!-- MODAL AREA START (Quick View Modal) -->

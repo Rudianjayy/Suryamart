@@ -55,7 +55,7 @@
                             <a href="/identitas_admin"> Kategori Teratas</a>
                         </li>
                         <li>
-                            <a href="/fasilitasadmin"> Team Suryamart </a>
+                            <a href="/teamsurya"> Team Suryamart </a>
                         </li>
                         <li>
                             <a href="/admingaleri"> Galeri Suryamart </a>
