@@ -1,18 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Suryateam;
 use Illuminate\Http\Request;
+use App\Models\sejarah;
+use App\Models\galeri;
 
 class LandingController extends Controller
 {
     public function landing() {
-        $team = Suryateam::all();
-        return view('landingsurya.landing', compact('team'));
+        $sejarah = sejarah::all();
+        $galeri = galeri::all();
+        return view('landingsurya.landing',compact('sejarah','galeri'));
     }
-   
+
 }
 
 
-                 
+

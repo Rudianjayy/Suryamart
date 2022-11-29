@@ -170,7 +170,7 @@
 
                             <!-- mini-cart -->
                             <!-- Mobile Menu Button -->
-                        
+
                         </div>
                     </div>
                 </div>
@@ -442,10 +442,13 @@
                         <div class="ltn__blog-details-wrap">
                             <div class="ltn__page-details-inner ltn__blog-details-inner">
                                 <center>
-                                    <h2 class="ltn__blog-title">Sejarah Suryamart</h2>
+                                @foreach ($sejarah as $sejarah)
+
+                                <h2 class="ltn__blog-title">Sejarah Suryamart</h2>
                                 </center>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+                                <p>{!! $sejarah->deskripsi !!}</p>
+                                {{--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>  --}}
+                                @endforeach
                             </div>
                             <!-- blog-tags-social-media -->
                         </div>
@@ -598,43 +601,47 @@
                 <div class="row ltn__image-slider-2-active slick-arrow-1 slick-arrow-1-inner">
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/surya.jpeg') }}" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/surya.jpeg') }}" alt="Image" style="width: 400px; height:206px">
+                            @foreach ($galeri as $galeri)
+
+                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
+
+                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/3.jpeg') }}" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/3.jpeg') }}" alt="Image" style="width: 400px; height:206px">
+                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
+                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" alt="Image" style="width: 400px; height:206px">
+                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
+                                <img src="{{  asset('fotomahasiswa/' . $galeri->foto)  }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" alt="Image" style="width: 400px; height:206px">
+                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
+                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
                             <a href="img/img-slide/1.jpg" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" alt="Image" style="width: 400px; height:206px">
+                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
                             </a>
+                            @endforeach
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" alt="Image" style="width: 400px; height:206px">
+                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
+                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
