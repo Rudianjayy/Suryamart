@@ -46,7 +46,7 @@
                     </a>
                     <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
                         <li>
-                            <a href="/profilsekolahadmin">Slider</a>
+                            <a href="/adminslider">Slider</a>
                         </li>
                         <li>
                             <a href="/adminsejarah"> Sejarah Suryamart </a>

@@ -44,7 +44,6 @@ Route::get('/promo', [SuryamartController::class, 'promo'])->name('promo');
 
 //Sejarah
 
-Route::get('/sejarah', [SuryamartController::class, 'sejarah'])->name('sejarah');
 Route::get('/adminsejarah', [SuryamartController::class, 'adminsejarah'])->name('adminsejarah');
 Route::get('/tambahsejarah', [SuryamartController::class, 'tambahsejarah'])->name('tambahsejarah');
 Route::post('/sejarahproses2', [SuryamartController::class, 'sejarahproses2'])->name('sejarahproses2');
@@ -55,13 +54,24 @@ Route::get('/deletesejarah/{id}', [SuryamartController::class, 'deletesejarah'])
 
 //Galeri
 
-Route::get('/galeri', [SuryamartController::class, 'galeri'])->name('galeri');
 Route::get('/admingaleri', [SuryamartController::class, 'admingaleri'])->name('admingaleri');
 Route::get('/tambahgaleri', [SuryamartController::class, 'tambahgaleri'])->name('tambahgaleri');
 Route::post('/galeriproses1', [SuryamartController::class, 'galeriproses1'])->name('galeriproses1');
 Route::get('/editgaleri/{id}', [SuryamartController::class, 'editgaleri'])->name('editgaleri');
 Route::post('/editproses1/{id}', [SuryamartController::class, 'editproses1'])->name('editproses1');
 Route::get('/deletegaleri/{id}', [SuryamartController::class, 'deletegaleri'])->name('deletegaleri');
+
+
+
+//slider
+
+Route::get('/adminslider', [SuryamartController::class, 'adminslider'])->name('adminslider');
+Route::get('/tambahslider', [SuryamartController::class, 'tambahslider'])->name('tambahslider');
+Route::post('/sliderproses5', [SuryamartController::class, 'sliderproses5'])->name('sliderproses5');
+Route::get('/editslider/{id}', [SuryamartController::class, 'editslider'])->name('editslider');
+Route::post('/editslider5/{id}', [SuryamartController::class, 'editslider5'])->name('editslider5');
+Route::get('/deleteslider/{id}', [SuryamartController::class, 'deleteslider'])->name('deleteslider');
+
 
 
 

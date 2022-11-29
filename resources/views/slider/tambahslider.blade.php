@@ -6,7 +6,7 @@
 <div id="content" class="main-content">
 
         <body>
-            <h1 style="color: black;" class="text-center mb-4">Tambah Galeri </h1>
+            <h1 style="color: black;" class="text-center mb-4">Tambah Slider</h1>
 
             <div class="container" mb-5>
 
@@ -14,11 +14,20 @@
                     <div class="col-8">
                         <div class="card">
                             <div class="card-body">
-                                <form action="/galeriproses1" method="POST" enctype="multipart/form-data">
+                                <form action="/sliderproses5" method="POST" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Foto Galeri :</label>
+                                        <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
+                                        <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" >
+                                        @error('deskripsi')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Foto Slider :</label>
                                         <input type="file" name="foto" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp">
                                         @error('foto')
@@ -27,7 +36,7 @@
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">Submit</button>
-                                    <a href="/admingaleri" class="btn btn-danger">Kembali</a>
+                                    <a href="/adminsejarah" class="btn btn-danger">Kembali</a>
                                 </form>
                             </div>
                         </div>
