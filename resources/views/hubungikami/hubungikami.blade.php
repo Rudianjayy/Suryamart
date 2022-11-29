@@ -130,7 +130,7 @@
                         <div class="col header-menu-column menu-color-white">
                             <div class="header-menu d-none d-xl-block">
                                 <nav>
-                                    @include('layout.navbar')
+                                    @include('koneksi.navbar')
                                 </nav>
                             </div>
                         </div>
@@ -436,7 +436,7 @@
 </div>
 <!-- GOOGLE MAP AREA END -->
         <!-- FOOTER AREA START -->
-     @include('layout.footer')
+     @include('koneksi.footer')
         <!-- FOOTER AREA END -->
 
         <!-- MODAL AREA START (Quick View Modal) -->

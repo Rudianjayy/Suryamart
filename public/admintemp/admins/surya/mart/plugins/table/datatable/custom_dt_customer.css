@@ -193,7 +193,7 @@ img.img-thumbnail.rounded-circle {
     font-size: 17px;
     color: #1a73e9;
 }
-.table-responsive > .dataTables_wrapper .row:nth-child(2) > .col-sm-12:first-child { margin-top: 3.5rem; }
+.table-responsive > .dataTables_wrapper .row:nth-child(2) > .col-sm-12:first-child { margin-top: 0.5rem; }
 .style-2 .flaticon-close-fill {
     color: #d3d3d3;
 }

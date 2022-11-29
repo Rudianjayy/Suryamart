@@ -16,20 +16,18 @@
     <link href="{{ asset('admintemp/admins/surya/mart/plugins/maps/vector/jvector/jquery-jvectormap-2.0.3.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/admins/surya/mart/plugins/charts/chartist/chartist.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admintemp/admins/surya/mart/assets/css/default-dashboard/style.css') }}" rel="stylesheet" type="text/css" />
-
-    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/admins/surya/mart/plugins/table/datatable/datatables.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/admins/surya/mart/plugins/table/datatable/custom_dt_scrollable.css') }}">
-
-    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+<!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/admins/surya/mart/assets/css/components/custom-counter.css') }}" rel="stylesheet" type="text/css">
 
-    <link href="{{ asset('admintemp/admins/surya/mart/assets/css/components/custom-counter.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admintemp/admins/surya/mart/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
-    <script src="{{ asset('admintemp/admins/surya/mart/plugins/sweetalerts/promise-polyfill.js') }}"></script>
     <link href="{{ asset('admintemp/admins/surya/mart/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/admins/surya/mart/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/admins/surya/mart/assets/css/ui-kit/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/admins/surya/mart/plugins/table/datatable/datatables.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/admins/surya/mart/plugins/table/datatable/custom_dt_customer.css') }}">
 
 </head>

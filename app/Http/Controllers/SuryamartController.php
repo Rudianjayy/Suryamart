@@ -132,14 +132,14 @@ class SuryamartController extends Controller
         $this->validate($request,[
             'foto_team' =>'required',
             'nama_team' =>'required',
-            'jabatan_team' =>'required',
+            'jabatan' =>'required',
             // 'fb' =>'required',
             // 'wa' =>'required',
             // 'ig' =>'required',
         ],[
             'foto_team.required' =>'Harus diisi',
             'nama_team.required' =>'Harus diisi',
-            'jabatan_team.required' =>'Harus diisi',
+            'jabatan.required' =>'Harus diisi',
             // 'fb.required' =>'Harus diisi',
             // 'wa.required' =>'Harus diisi',
             // 'ig.required' =>'Harus diisi',
@@ -149,9 +149,9 @@ class SuryamartController extends Controller
             'foto_team' =>$request->foto_team,
             'nama_team' =>$request->nama_team,
             'jabatan' =>$request->jabatan,
-            'link_fb' =>$request->fb,
-            'link_wa' =>$request->wa,
-            'link_ig' =>$request->ig,
+            'link_fb' =>$request->link_fb,
+            'link_wa' =>$request->link_wa,
+            'link_ig' =>$request->link_ig,
 
         ]);
         if($request->hasFile('foto_team')){
@@ -160,7 +160,7 @@ class SuryamartController extends Controller
             $data2->save();
         }
 
-        return redirect()->route('adminteam')->with('success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('teamsurya')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editteam($id){
@@ -198,14 +198,14 @@ class SuryamartController extends Controller
             $data2->save();
         }
 
-        return redirect('adminteam')->with('success',' Data Berhasil di Ubah!');
+        return redirect('teamsurya')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deleteteam($id){
         $data2 = Suryateam::find($id);
         $data2->delete();
-        return redirect('adminteam')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('teamsurya')->with('toast_error',' Data Berhasil di Hapus!');
     }
 
 
