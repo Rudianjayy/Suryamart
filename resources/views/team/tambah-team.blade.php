@@ -14,7 +14,7 @@
                     <div class="col-8">
                         <div class="card">
                             <div class="card-body">
-                                <form action="/submitdata15" method="POST" enctype="multipart/form-data">
+                                <form action="/submitdata" method="POST" enctype="multipart/form-data">
                                     @csrf
     
                                     <div class="mb-3">
@@ -35,40 +35,38 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Jabatan Anggota Team :</label>
-                                        <input type="text" name="jabatan_team" class="form-control" id="exampleInputEmail1"
+                                        <input type="text" name="jabatan" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp" placeholder="contoh : CEO">
-                                        @error('jabatan_team')
+                                        @error('jabatan')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Link Facebook :</label>
-                                        <textarea class="form-control form-control-solid" name="fb" placeholder="contoh : https://www.facebook.com/profile.php?id=100018447972261"></textarea>
-                                        @error('fb')
+                                        <textarea class="form-control form-control-solid" name="link_fb" placeholder="contoh : https://www.facebook.com/profile.php?id=100018447972261"></textarea>
+                                        @error('link_fb')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Link WhatsApp :</label>
-                                        <textarea class="form-control form-control-solid" name="wa" placeholder="contoh : https://wa.me/62..?= Isi Pesan"></textarea>
-                                        @error('wa')
+                                        <textarea class="form-control form-control-solid" name="link_wa" placeholder="contoh : https://wa.me/62..?= Isi Pesan"></textarea>
+                                        @error('link_wa')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Link Instagram :</label>
-                                        <textarea class="form-control form-control-solid" name="ig" placeholder="contoh : https://www.instagram.com/(nama)/"></textarea>
-                                        @error('ig')
+                                        <textarea class="form-control form-control-solid" name="link_ig" placeholder="contoh : https://www.instagram.com/(nama)/"></textarea>
+                                        @error('link_ig')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
     
     
     
-    
-    
                                     <button type="submit" class="btn btn-primary">Submit</button>
-                                    <a href="/adminteam" class="btn btn-danger">Kembali</a>
+                                    <a href="/teamsurya" class="btn btn-danger">Kembali</a>
                                 </form>
                             </div>
                         </div>

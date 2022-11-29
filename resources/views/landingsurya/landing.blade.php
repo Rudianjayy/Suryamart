@@ -562,150 +562,27 @@
                     <h1 class="section-title white-color---">Team Suryamart</h1>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="ltn__team-item">
-                            <div class="team-img">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/team/1.jpg') }}" alt="Image">
-                            </div>
-                            <div class="team-info">
-                                <h6 class="ltn__secondary-color"> Founder </h6>
-                                <h4><a href="team-details.html">Rosalina D. William</a></h4>
-                                <div class="ltn__social-media">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+
+                    @foreach ( $team as $tim )
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ltn__team-item">
+                                <div class="team-img">
+                                    <img src="{{ asset('fotosuryamart/' . $tim->foto_team) }}" alt="Image">
+                                </div>
+                                <div class="team-info">
+                                    <h6 class="ltn__secondary-color"> {{ $tim->jabatan }} </h6>
+                                    <h4><a href="team-details.html">{{ $tim->nama }}</a></h4>
+                                    <div class="ltn__social-media">
+                                        <ul>
+                                            <li><a href="{{ $tim->link_fb }}"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="{{ $tim->link_wa }}"><i class="fab fa-whatsapp"></i></a></li>
+                                            <li><a href="{{ $tim->link_ig }}"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="ltn__team-item">
-                            <div class="team-img">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/team/2.jpg') }}" alt="Image">
-                            </div>
-                            <div class="team-info">
-                                <h6 class="ltn__secondary-color"> CEo </h6>
-                                <h4><a href="team-details.html">Kelian Anderson</a></h4>
-                                <div class="ltn__social-media">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="ltn__team-item">
-                            <div class="team-img">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/team/3.jpg') }}" alt="Image">
-                            </div>
-                            <div class="team-info">
-                                <h6 class="ltn__secondary-color">Organic Farmer</h6>
-                                <h4><a href="team-details.html">Miranda H. Halim</a></h4>
-                                <div class="ltn__social-media">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="ltn__team-item">
-                            <div class="team-img">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/team/4.jpg') }}" alt="Image">
-                            </div>
-                            <div class="team-info">
-                                <h6 class="ltn__secondary-color">Organic Farmer</h6>
-                                <h4><a href="team-details.html">Damble D. Browni.</a></h4>
-                                <div class="ltn__social-media">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="ltn__team-item">
-                            <div class="team-img">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/team/5.jpg') }}" alt="Image">
-                            </div>
-                            <div class="team-info">
-                                <h6 class="ltn__secondary-color">Organic Farmer</h6>
-                                <h4><a href="team-details.html">Aiden Benjamin</a></h4>
-                                <div class="ltn__social-media">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="ltn__team-item">
-                            <div class="team-img">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/team/6.jpg') }}" alt="Image">
-                            </div>
-                            <div class="team-info">
-                                <h6 class="ltn__secondary-color">Organic Farmer</h6>
-                                <h4><a href="team-details.html">James Carter</a></h4>
-                                <div class="ltn__social-media">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="ltn__team-item">
-                            <div class="team-img">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/team/7.jpg') }}" alt="Image">
-                            </div>
-                            <div class="team-info">
-                                <h6 class="ltn__secondary-color">Organic Farmer</h6>
-                                <h4><a href="team-details.html">William Gabriel</a></h4>
-                                <div class="ltn__social-media">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="ltn__team-item">
-                            <div class="team-img">
-                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/team/8.jpg') }}" alt="Image">
-                            </div>
-                            <div class="team-info">
-                                <h6 class="ltn__secondary-color">Organic Farmer</h6>
-                                <h4><a href="team-details.html">Adam Joseph</a></h4>
-                                <div class="ltn__social-media">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -772,8 +649,52 @@
                 </div>
             </div>
         </div>
-        <!-- IMAGE SLIDER AREA END -->
-
+        <div class="col-xl-3 col-lg-4 col-sm-6 col-6">
+            <div class="ltn__product-item ltn__product-item-3 text-center">
+                <div class="product-img">
+                    <a href="product-details.html"><img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/product/1.png') }}" alt="#"></a>
+                    <div class="product-badge">
+                        <ul>
+                            <li class="sale-badge">New</li>
+                        </ul>
+                    </div>
+                    <div class="product-hover-action">
+                        <ul>
+                            <li>
+                                <a href="#" title="Quick View" data-toggle="modal" data-target="#quick_view_modal">
+                                    <i class="far fa-eye"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Add to Cart" data-toggle="modal" data-target="#add_to_cart_modal">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Wishlist" data-toggle="modal" data-target="#liton_wishlist_modal">
+                                    <i class="far fa-heart"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-ratting">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                            <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                        </ul>
+                    </div>
+                    <h2 class="product-title"><a href="product-details.html">Red Hot Tomato</a></h2>
+                    <div class="product-price">
+                        <span>$149.00</span>
+                        <del>$162.00</del>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -810,7 +731,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-12">
                                             <div class="modal-product-img">
-                                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/') }}img/product/4.png" alt="#">
+                                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/product/1.png') }}" alt="#">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12">
@@ -913,7 +834,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="modal-product-img">
-                                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/') }}img/product/1.png" alt="#">
+                                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/product/1.png') }}" alt="#">
                                             </div>
                                             <div class="modal-product-info">
                                                 <h5><a href="product-details.html">Vegetables Juices</a></h5>
@@ -927,7 +848,7 @@
                                             <div class="additional-info d-none---">
                                                 <p>We want to give you <b>10% discount</b> for your first order, <br> Use (LoveBroccoli) discount code at checkout</p>
                                                 <div class="payment-method">
-                                                    <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/') }}img/icons/payment.png" alt="#">
+                                                    <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/icons/payment.png') }}" alt="#">
                                                 </div>
                                             </div>
                                         </div>
@@ -957,7 +878,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="modal-product-img">
-                                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/') }}img/product/7.png" alt="#">
+                                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/product/1.png') }}" alt="#">
                                             </div>
                                             <div class="modal-product-info">
                                                 <h5><a href="product-details.html">Vegetables Juices</a></h5>

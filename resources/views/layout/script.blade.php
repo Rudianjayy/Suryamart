@@ -22,6 +22,7 @@
     </script>
     <script src="assets/js/custom.js"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <script src="{{ asset('admintemp/admins/surya/mart/plugins/sweetalerts/promise-polyfill.js') }}"></script>
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{ asset('admintemp/admins/surya/mart/plugins/charts/chartist/chartist.js') }}"></script>
@@ -37,81 +38,9 @@
     <script src="{{ asset('admintemp/admins/surya/mart/assets/js/support-chat.js') }}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{ asset('admintemp/admins/surya/mart/plugins/table/datatable/datatables.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $('#vertical-scroll').DataTable({
-                "scrollY": "200px",
-                "scrollCollapse": true,
-                "paging": false,
-                "language": {
-                    "paginate": {
-                        "previous": "<i class='flaticon-arrow-left-1'></i>",
-                        "next": "<i class='flaticon-arrow-right'></i>"
-                    },
-                    "info": "Showing page _PAGE_ of _PAGES_"
-                }
-            });
-            $('#horizontal-scroll').DataTable({
-                "scrollX": true,
-                "language": {
-                    "paginate": {
-                        "previous": "<i class='flaticon-arrow-left-1'></i>",
-                        "next": "<i class='flaticon-arrow-right'></i>"
-                    },
-                    "info": "Showing page _PAGE_ of _PAGES_"
-                }
-            });
-            $('#vertical-horizontal-scroll').DataTable({
-                "scrollY": "460",
-                "scrollX": true,
-                "lengthMenu": [25, 50, 75, 100],
-                "language": {
-                    "paginate": {
-                        "previous": "<i class='flaticon-arrow-left-1'></i>",
-                        "next": "<i class='flaticon-arrow-right'></i>"
-                    },
-                    "info": "Showing page _PAGE_ of _PAGES_"
-                }
-            });
-        });
-    </script>
-    <script>
-        $('#ecommerce-product-list').DataTable({
-            "lengthMenu": [5, 10, 20, 50, 100],
-            "language": {
-                "paginate": {
-                    "previous": "<i class='flaticon-arrow-left-1'></i>",
-                    "next": "<i class='flaticon-arrow-right'></i>"
-                },
-                "info": "Showing page _PAGE_ of _PAGES_"
-            },
-            drawCallback: function(settings) {
-                $('[data-toggle="tooltip"]').tooltip();
-            }
-        });
-    </script>
-    <script>
-        function initCustomScrollbar() {
-            var scrollPane = document.querySelector(".scroll-content");
-            var scrollPaneInit = $(scrollPane).mCustomScrollbar();
+ 
 
-            setTimeout(function() {
-                var scrollInnerPane = $(scrollPane).find(".mCustomScrollBox");
-                $(scrollInnerPane).height(window.innerHeight + "px");
-            }, 500);
-
-            $(window).resize(function() {
-                if (window.innerWidth < 768) {
-                    initCustomScrollbar();
-                } else {
-                    $(scrollPane).mCustomScrollBar('destroy');
-                }
-            });
-        }
-
-        initCustomScrollbar();
-    </script>
-
+    
 
     <script src="{{ asset('admintemp/admins/surya/mart/plugins/charts/amcharts/amcharts.js') }}"></script>
     <script src="{{ asset('admintemp/admins/surya/mart/plugins/charts/amcharts/serial.js') }}"></script>
@@ -121,7 +50,6 @@
     <!-- BEGIN CUSTOM SCRIPTS FILE -->
     <script src="{{ asset('admintemp/admins/surya/mart/plugins/charts/amcharts/column_and_barchart.js') }}"></script>
 
-    <script src="{{ asset('admintemp/admins/surya/mart/plugins/sweetalerts/promise-polyfill.js') }}"></script>
 
 
     {{-- <!-- BEGIN PAGE LEVEL SCRIPTS -->
