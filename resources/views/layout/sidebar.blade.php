@@ -63,6 +63,12 @@
                         <li>
                             <a href="/fasilitasadmin"> Footer </a>
                         </li>
+                        <li>
+                            <a href="/kontak"> Kontak </a>
+                        </li>
+                        <li>
+                            <a href="/about"> Tentang Suryamart </a>
+                        </li>
                     </ul>
                 </li>
             <li class="menu-title">Katalog</li>

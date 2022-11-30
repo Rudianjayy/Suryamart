@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\User;
 use App\Models\Katalog;
 use App\Models\Suryateam;
 use Illuminate\Http\Request;
 use App\Models\sejarah;
 use App\Models\galeri;
+use App\Models\Kontak;
 use Illuminate\Support\Facades\Auth;
 
 class SuryamartController extends Controller
@@ -354,7 +356,108 @@ class SuryamartController extends Controller
 
 
 
+    public function loby2(){
+        $data3 = Kontak::all();
+        return view('kontak.admin-kontak', compact('data3'));
+    }
+    public function tambahkontak()
+    {
+        return view('kontak.tambah-kontak');
+    }
 
+    public function submitdata2(Request $request){
+        // dd($request->all());
+        $this->validate($request,[
+            'judul' =>'required',
+            'link' =>'required',
+        ],[
+            'judul.required' =>'Harus diisi',
+            'link.required' =>'Harus diisi',
+
+        ]);
+        $data3 = Kontak::create([
+            'judul' =>$request->judul,
+            'link' =>$request->link,
+        ]);
+
+        return redirect()->route('kontak')->with('success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function editkontak($id){
+
+        $data3 = Kontak::findOrFail($id);
+        return view('kontak.edit-kontak', compact('data3'));
+    }
+
+    public function editprosesdua(Request $request, $id){
+        $this->validate($request,[
+            'link' =>'required',
+        ],[
+            'link' =>'harus diisi',
+
+        ]);
+        $data3 = Kontak::find($id);
+        $data3->update([
+            'link' =>$request->link,
+        ]);
+
+        return redirect('kontak')->with('success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function delete($id){
+        $data3 = Kontak::find($id);
+        $data3->delete();
+        return redirect('kontak')->with('success',' Data Berhasil di Hapus!');
+    }
+    
+    
+    
+    
+    
+    
+    public function loby3(){
+        $data4 = About::all();
+        return view('about.admin-about', compact('data4'));
+    }
+    public function editabout($id){
+
+        $data4 = About::findOrFail($id);
+        return view('about.edit-about', compact('data4'));
+    }
+
+    public function submitedit3(Request $request, $id){
+        // $this->validate($request,[
+        //     'link' =>'required',
+        // ],[
+        //     'link' =>'harus diisi',
+
+        // ]);
+        $data4 = About::find($id);
+        $data4->update([
+            'link_map' =>$request->link_map,
+            'link_ig' =>$request->link_ig,
+            'link_fb' =>$request->link_fb,
+            'email' =>$request->email,
+            'notelpon' =>$request->notelpon,
+            'alamat' =>$request->alamat,
+            'penjelasan' =>$request->penjelasan,
+        ]);
+        if($request->hasFile('foto_about')){
+            $request->file('foto_about')->move('fotosuryamart/',$request->file('foto_about')->getClientOriginalName());
+            $data4->foto_about = $request->file('foto_about')->getClientOriginalName();
+            $data4->save();
+        }
+
+        return redirect('about')->with('success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function deleteabout($id){
+        $data4 = About::find($id);
+        $data4->delete();
+        return redirect('about')->with('success',' Data Berhasil di Hapus!');
+    }
 
 
 

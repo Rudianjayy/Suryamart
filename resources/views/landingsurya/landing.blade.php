@@ -587,7 +587,7 @@
         <!-- PRODUCT AREA END -->
 
         <!-- IMAGE SLIDER AREA START (img-slider-2) -->
-        <div class="ltn__img-slider-area ltn__img-slider-2 section-bg-1 pt-115 pb-90">
+        {{-- <div class="ltn__img-slider-area ltn__img-slider-2 section-bg-1 pt-115 pb-90">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -647,7 +647,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="col-xl-3 col-lg-4 col-sm-6 col-6">
             <div class="ltn__product-item ltn__product-item-3 text-center">
                 <div class="product-img">

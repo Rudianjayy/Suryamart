@@ -71,4 +71,18 @@ Route::get('/deletegaleri/{id}', [SuryamartController::class, 'deletegaleri'])->
     Route::get('/editteam/{id}', [SuryamartController::class, 'editteam'])->name('editteam');
     Route::post('/submitedit/{id}', [SuryamartController::class, 'submitedit'])->name('submitedit');
     Route::get('/deleteteam/{id}', [SuryamartController::class, 'deleteteam'])->name('deleteteam');
+    
+    
+    Route::get('/kontak', [SuryamartController::class, 'loby2'])->name('kontak');
+    Route::get('/tambahkontak', [SuryamartController::class, 'tambahkontak'])->name('tambahkontak');
+    Route::post('/submitdata2', [SuryamartController::class, 'submitdata2'])->name('submitdata2');
+    Route::get('/editkontak/{id}', [SuryamartController::class, 'editkontak'])->name('editkontak');
+    Route::post('/submitedit2/{id}', [SuryamartController::class, 'submitedit2'])->name('submitedit2');
+    Route::get('/deletekontak/{id}', [SuryamartController::class, 'deletekontak'])->name('deletekontak');
+    
+    
+    Route::get('/about', [SuryamartController::class, 'loby3'])->name('about');
+    Route::get('/editabout/{id}', [SuryamartController::class, 'editabout'])->name('editabout');
+    Route::post('/submitedit3/{id}', [SuryamartController::class, 'submitedit3'])->name('submitedit3');
+    Route::get('/deleteabout/{id}', [SuryamartController::class, 'deleteabout'])->name('deleteabout');
 
