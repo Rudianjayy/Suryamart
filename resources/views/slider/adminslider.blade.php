@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="page-header">
                     <div class="page-title">
-                        <h3>Galeri</h3>
+                        <h3>slider</h3>
                         <div class="crumbs">
                             <ul id="breadcrumbs" class="breadcrumb">
                                 <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
@@ -33,10 +33,10 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Galeri</h4>
+                                        <h4>slider</h4>
                                     </div>
                                     <div>
-                                        <a href="/tambahgaleri" class="btn btn-primary " id="kt_account_profile_details_submit"
+                                        <a href="/tambahslider" class="btn btn-primary " id="kt_account_profile_details_submit"
                                             style="margin-left: 30px;">Tambah
                                             +</a>
                                     </div>
@@ -49,10 +49,11 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Foto Galeri</th>
+                                                <th scope="col">Deskripsi</th>
+                                                <th scope="col">Foto Slider</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
-                                        </thead>
+
                                         <tbody>
                                             @php
                                                 $no = 1;
@@ -60,15 +61,15 @@
                                             @foreach ($data as $d)
                                                 <tr>
                                                     <th>{{ $no++ }}</th>
+                                                    <td>{{ $d->deskripsi }}</td>
                                                     <td>
                                                         <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                             style="width: 50px;">
                                                     </td>
-
                                                     <td class="align-center">
                                                         <ul class="table-controls">
                                                             <li>
-                                                                <a href="/editgaleri/{{ $d->id }}" data-toggle="tooltip"
+                                                                <a href="/editslider/{{ $d->id }}" data-toggle="tooltip"
                                                                     data-placement="top" title="Edit">
                                                                     <i class="flaticon-edit"></i>
                                                                 </a>
@@ -117,7 +118,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/deletegaleri/" + id + ""
+                        window.location = "/deleteslider/" + id + ""
                          swal("Data berhasil dihapus!", {
                            icon: "success",
                          });

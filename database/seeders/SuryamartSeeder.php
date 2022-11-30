@@ -2,9 +2,16 @@
 
 namespace Database\Seeders;
 
+<<<<<<< HEAD
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+=======
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+>>>>>>> 04033e82fb43ba077c93ad16495737f4f0cb1378
 
 class SuryamartSeeder extends Seeder
 {
@@ -15,6 +22,7 @@ class SuryamartSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         DB::table('abouts')->insert([
             'foto_about' => 'TempSuryamart/suryamart/mart/html/assets/surya/img/product/3.png',
             'penjelasan' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse maiores non ipsa tempore nihil nemo, aperiam repellendus aut temporibus labore hic soluta dolorem quam modi mollitia perspiciatis consectetur quibusdam fuga.',
@@ -29,3 +37,27 @@ class SuryamartSeeder extends Seeder
     }
 }
 
+=======
+        DB::table('sejarahs')->insert([
+            'deskripsi' => 'deskripsi',
+        ]);
+        DB::table('galeris')->insert([
+            'foto' => '0.png',
+            'foto' => 'foto',
+        ]);
+        DB::table('suryateams')->insert([
+            'foto_team' => 'foto',
+            'jabatan' => 'jabatan',
+            'nama_team' => 'Misi',
+            'link_fb' => 'link_fb',
+            'link_wa' => 'link_wa',
+            'link_ig' => 'link_ig',
+
+        ]);
+        DB::table('sliders')->insert([
+            'foto_team' => 'foto',
+            'deskripsi' => 'deskripsi',
+        ]);
+    }
+}
+>>>>>>> 04033e82fb43ba077c93ad16495737f4f0cb1378

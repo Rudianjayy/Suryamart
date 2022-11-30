@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\User;
+use App\Models\galeri;
+use App\Models\Slider;
 use App\Models\Katalog;
+use App\Models\sejarah;
 use App\Models\Suryateam;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Models\sejarah;
 use App\Models\galeri;
 use App\Models\Kontak;
+=======
+>>>>>>> 04033e82fb43ba077c93ad16495737f4f0cb1378
 use Illuminate\Support\Facades\Auth;
 
 class SuryamartController extends Controller
@@ -235,6 +241,84 @@ class SuryamartController extends Controller
         return redirect('admingaleri')->with('success',' Data Berhasil di Hapus!');
     }
 
+
+
+
+    //slider//
+
+    public function slider() {
+        $slider = Slider::all();
+        return view('slider.slider',compact('slider'));
+    }
+    public function adminslider() {
+        $data = Slider::all();
+        return view('slider.adminslider', compact('data'));
+    }
+    public function tambahslider()
+    {
+        return view('slider.tambahslider');
+    }
+
+    public function sliderproses5(Request $request){
+        // dd($request->all());
+        $this->validate($request,[
+            'deskripsi' =>'required',
+            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+        ],[
+            'deskripsi.required' =>'Harus diisi',
+            'foto.required' =>'Harus diisi',
+            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+
+        ]);
+        $data = Slider::create([
+            'deskripsi' =>$request->deskripsi,
+            'foto' =>$request->foto,
+        ]);
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect()->route('adminslider')->with('success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function editslider($id){
+
+        $data = Slider::findOrFail($id);
+        return view('slider.editslider', compact('data'));
+    }
+
+    public function editslider5(Request $request, $id){
+        $this->validate($request,[
+            'deskripsi' =>'required',
+            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+        ],[
+            'deskripsi.required' =>'Harus diisi',
+            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+
+        ]);
+        $data = Slider::find($id);
+        $data->update([
+            'deskripsi' =>$request->deskripsi,
+            'foto' =>$request->foto,
+
+        ]);
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect('adminslider')->with('success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function deleteslider($id){
+        $data = Slider::find($id);
+        $data->delete();
+        return redirect('adminslider')->with('success',' Data Berhasil di Hapus!');
+    }
 
 
 

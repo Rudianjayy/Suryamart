@@ -371,7 +371,8 @@
         <div class="ltn__slider-area ltn__slider-3  section-bg-1" style="height: 700px!important; background-color: white;">
             <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white" >
                 <!-- ltn__slide-item -->
-                <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 text-color-white bg-image" data-bg="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/surya.jpeg') }}" style="height: 700px!important;">
+                @foreach ($Slider as $Slider)
+                <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 text-color-white bg-image" data-bg="{{ asset('fotomahasiswa/' . $Slider->foto) }}" style="height: 700px!important;">
                     <div class="ltn__slide-item-inner">
                         <div class="container">
                             <div class="row">
@@ -384,10 +385,11 @@
                                             </a>
                                         </div> -->
 
-                                            <!-- <h6 class="slide-sub-title animated"><img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/icons/icon-img/1.png') }}" alt="#"> 100% genuine Products</h6> -->
+                                            {{-- <h6class="slide-sub-titleanimated"><imgsrc="asset('TempSuryamart/suryamart/mart/html/assets/surya/img/icons/icon-img/1.png') --}}}" alt="#"> 100% genuine Products</h6> --}}
+
                                             <h1 class="slide-title animated ">Suryamart </h1>
                                             <div class="slide-brief animated">
-                                                <p>Jl. KH Imam Bahri No.10, Dusun Krajan, Genteng Wetan, Kec. Genteng, Kabupaten Banyuwangi, Jawa Timur 68465</p>
+                                                <p>{!! $Slider->deskripsi !!}</p>
                                             </div>
                                             <div class="btn-wrapper animated">
                                                 <a href="/katalog" class="theme-btn-1 btn btn-effect-1 text-uppercase">Lihat Katalog</a>
@@ -403,26 +405,27 @@
                     </div>
                 </div>
                 <!-- ltn__slide-item -->
-                <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 text-color-white bg-image" data-bg="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}">
+                <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 text-color-white bg-image" data-bg="{{ asset('fotomahasiswa/' . $Slider->foto) }}">
                     <div class="ltn__slide-item-inner  text-right">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 align-self-center">
                                     <div class="slide-item-info">
                                         <div class="slide-item-info-inner ltn__slide-animation">
-                                            <h6 class="slide-sub-title animated"><img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/icons/icon-img/1.png') }}" alt="#"> 100% genuine Products</h6>
-                                            <h1 class="slide-title animated ">Our Garden's Most <br> Favorite Food</h1>
+                                            <h6 class="slide-sub-title animated"><img src="{{ asset('fotomahasiswa/' . $Slider->foto) }}" alt="#"></h6>
+                                            <h1 class="slide-title animated ">{!! $Slider->deskripsi !!}<br>{!! $Slider->deskripsi !!}</h1>
                                             <div class="slide-brief animated">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                                <p>{!! $Slider->deskripsi !!}</p>
                                             </div>
                                             <div class="btn-wrapper animated">
-                                                <a href="shop.html" class="theme-btn-1 btn btn-effect-1 text-uppercase">Explore Products</a>
+                                                <a href="shop.html" class="theme-btn-1 btn btn-effect-1 text-uppercase">{!! $Slider->deskripsi !!}</a>
                                             </div>
                                         </div>
+                                        @endforeach
                                     </div>
-                                    <!-- <div class="slide-item-img slide-img-left">
-                                    <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/') }}img/slider/21.png" alt="#">
-                                </div> -->
+                                     <div class="slide-item-img slide-img-left">
+                                    <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/slider/21.png') }}" alt="#">
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -439,19 +442,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-13 mt-5">
+                        @foreach ($sejarah as $sejarah)
                         <div class="ltn__blog-details-wrap">
                             <div class="ltn__page-details-inner ltn__blog-details-inner">
                                 <center>
-                                @foreach ($sejarah as $sejarah)
 
-                                <h2 class="ltn__blog-title">Sejarah Suryamart</h2>
+                                    <h2 class="ltn__blog-title">Sejarah Suryamart</h2>
                                 </center>
                                 <p>{!! $sejarah->deskripsi !!}</p>
-                                {{--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>  --}}
-                                @endforeach
                             </div>
                             <!-- blog-tags-social-media -->
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -592,56 +594,55 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title-area ltn__section-title-2 text-center">
+                            @foreach ($galeri as $galeri)
                             <h1 class="section-title">Galery Suryamart<span>.</span></h1>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container-fluid">
+
                 <div class="row ltn__image-slider-2-active slick-arrow-1 slick-arrow-1-inner">
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            @foreach ($galeri as $galeri)
-
-                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
-
+                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/surya.jpeg') }}" data-rel="lightcase:myCollection">
                                 <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
+                            </a>
+                        </div>
+                        @endforeach
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="ltn__img-slide-item-2">
+                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/3.jpeg') }}" data-rel="lightcase:myCollection">
+                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/3.jpeg') }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
+                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" data-rel="lightcase:myCollection">
+                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
-                                <img src="{{  asset('fotomahasiswa/' . $galeri->foto)  }}" alt="Image" style="width: 400px; height:206px">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
+                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" data-rel="lightcase:myCollection">
+                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
                             <a href="img/img-slide/1.jpg" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
+                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" alt="Image" style="width: 400px; height:206px">
                             </a>
-                            @endforeach
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-2">
-                            <a href="{{ asset('fotomahasiswa/' . $galeri->foto) }}" data-rel="lightcase:myCollection">
-                                <img src="{{ asset('fotomahasiswa/' . $galeri->foto) }}" alt="Image" style="width: 400px; height:206px">
+                            <a href="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" data-rel="lightcase:myCollection">
+                                <img src="{{ asset('TempSuryamart/suryamart/mart/html/assets/surya/img/suryamart/2.jpeg') }}" alt="Image" style="width: 400px; height:206px">
                             </a>
                         </div>
                     </div>
