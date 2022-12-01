@@ -61,7 +61,7 @@
                                                 <tr>
                                                     <th>{{ $no++ }}</th>
                                                     <td>
-                                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
+                                                        <img src="{{ asset('fotosuryamart/' . $d->foto) }}" alt=""
                                                             style="width: 50px;">
                                                     </td>
 

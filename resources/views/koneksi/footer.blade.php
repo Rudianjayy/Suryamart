@@ -117,18 +117,10 @@
             <div class="row">
                 <div class="col-md-6 col-12">
                     <div class="ltn__copyright-design clearfix">
-                        <p>All Rights Reserved @ Company <span class="current-year"></span></p>
+                        <center><p>Copyright © 2022 at SMK Muhammadiyah 1 Genteng. Supported by Team Zoe</p></center>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 align-self-center">
-                    <div class="ltn__copyright-menu text-right">
-                        <ul>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Claim</a></li>
-                            <li><a href="#">Privacy & Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

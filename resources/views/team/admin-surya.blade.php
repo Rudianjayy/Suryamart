@@ -32,18 +32,8 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-<<<<<<< HEAD
-                                        <h4>Team UPJ</h4>
-                                    </div>
-                                    {{--  <div>
-                                        <a href="/tambahteam" class="btn btn-primary " id="kt_account_profile_details_submit"
-                                            style="margin-left: 30px;">Tambah
-                                            +</a>
-                                    </div>  --}}
-=======
                                         <h4>Style 3</h4>
                                     </div>
->>>>>>> 5ea6fe68e36aab7131f7aac975ab32d5e101ab8c
                                 </div>
                                 <div>
                                     <a href="/tambahteam" class="btn btn-primary " id="kt_account_profile_details_submit"
