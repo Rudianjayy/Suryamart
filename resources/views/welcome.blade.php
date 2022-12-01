@@ -12,22 +12,21 @@
 
         <div class="row layout-spacing ">
 
-            <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
-                <div class="widget-content-area  data-widgets br-4">
-                    <div class="widget  t-sales-widget">
-                        <div class="media">
-                            <div class="icon ml-2">
-                                <i class="flaticon-line-chart"></i>
-                            </div>
-                            <div class="media-body text-right">
-                                <p class="widget-text mb-0">Produk</p>
-                                <p class="widget-numeric-value">98,225</p>
+        <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                    <div class="widget-content-area  data-widgets br-4">
+                        <div class="widget  t-order-widget">
+                            <div class="media">
+                                <div class="icon ml-2">
+                                    <i class="flaticon-note-1"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <p class="widget-text mb-0">Album</p>
+                                    <p class="widget-numeric-value count"> </p>
+                                </div>
                             </div>
                         </div>
-                        <p class="widget-total-stats mt-2">94% New Sales</p>
                     </div>
                 </div>
-            </div>
 
             <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
                 <div class="widget-content-area  data-widgets br-4">

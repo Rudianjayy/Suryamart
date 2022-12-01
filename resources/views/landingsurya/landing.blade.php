@@ -413,7 +413,7 @@
                                 <div class="col-lg-12 align-self-center">
                                     <div class="slide-item-info">
                                         <div class="slide-item-info-inner ltn__slide-animation">
-                                            <h1 class="slide-title animated ">Our team the best</h1>
+                                            <h1 class="slide-title animated ">Suryamart</h1>
 
                                             <div class="slide-brief animated">
                                                 <p>{!! $Slider->deskripsi !!}</p>
@@ -492,7 +492,7 @@
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h5><a href="shop.html">Vegetables</a></h5>
+                                <h5><a href="shop.html">Sayuran</a></h5>
                                 <h6>(78 item)</h6>
                             </div>
                         </div>
@@ -505,7 +505,7 @@
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h5><a href="shop.html">Fruits</a></h5>
+                                <h5><a href="shop.html">Buah</a></h5>
                                 <h6>(45 item)</h6>
                             </div>
                         </div>
@@ -518,7 +518,7 @@
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h5><a href="shop.html">Meat</a></h5>
+                                <h5><a href="shop.html">Makanan</a></h5>
                                 <h6>(15 item)</h6>
                             </div>
                         </div>
@@ -531,7 +531,7 @@
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h5><a href="shop.html">Fish</a></h5>
+                                <h5><a href="shop.html">Ikan</a></h5>
                                 <h6>(25 item)</h6>
                             </div>
                         </div>
@@ -544,7 +544,7 @@
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h5><a href="shop.html">Others</a></h5>
+                                <h5><a href="shop.html">Lain</a></h5>
                                 <h6>(85 item)</h6>
                             </div>
                         </div>
