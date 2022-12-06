@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\tim;
+use App\Models\promo;
 use App\Models\galeri;
 use App\Models\Slider;
 use App\Models\sejarah;
@@ -15,7 +16,8 @@ class LandingController extends Controller
         $galeri = galeri::all();
         $Slider = Slider::all();
         $team = Suryateam::all();
-        return view('landingsurya.landing',compact('sejarah','galeri','Slider','team'));
+        $promo = promo::all();
+        return view('landingsurya.landing',compact('sejarah','galeri','Slider','team','promo'));
     }
 
 }

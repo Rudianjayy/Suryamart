@@ -448,7 +448,7 @@
                         <div class="ltn__blog-details-wrap">
                             <div class="ltn__page-details-inner ltn__blog-details-inner">
                                 <center>
-                                    <h2 class="ltn__blog-title">Sejarah Suryamart</h2>
+                                    <h2 class="ltn__blog-title">sejarah Suryamart</h2>
                                 </center>
                                 <p>{!! $sejarah->deskripsi !!}</p>
                                 @endforeach
@@ -466,7 +466,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title-area ltn__section-title-2 text-center">
-                            <h1 class="section-title white-color">Kategori Teratas</h1>
+                            <h1 class="section-title white-color">Kategori Favorit</h1>
                         </div>
                     </div>
                 </div>
@@ -782,8 +782,7 @@
         <!-- GOOGLE MAP AREA START -->
         <div class="google-map mb-120">
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd" width="100%" height="100%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4042232.5756917037!2d114.158126!3d-8.35309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9f6bb21ea5685375!2sSurya%20Mart!5e0!3m2!1sid!2sid!4v1670293023403!5m2!1sid!2sid" width="1400" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <!-- GOOGLE MAP AREA END -->
 

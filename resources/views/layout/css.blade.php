@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    
+
     <link rel="icon" type="image/x-icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="{{ asset('admintemp/admins/surya/mart/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
@@ -16,7 +16,7 @@
     <link href="{{ asset('admintemp/admins/surya/mart/plugins/maps/vector/jvector/jquery-jvectormap-2.0.3.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/admins/surya/mart/plugins/charts/chartist/chartist.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admintemp/admins/surya/mart/assets/css/default-dashboard/style.css') }}" rel="stylesheet" type="text/css" />
-<!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/admins/surya/mart/assets/css/components/custom-counter.css') }}" rel="stylesheet" type="text/css">
 

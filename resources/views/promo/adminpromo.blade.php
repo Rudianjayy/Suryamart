@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="page-header">
                     <div class="page-title">
-                        <h3>Sejarah</h3>
+                        <h3>promo</h3>
                         <div class="crumbs">
                             <ul id="breadcrumbs" class="breadcrumb">
                                 <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
@@ -33,10 +33,10 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Sejarah</h4>
+                                        <h4>promo</h4>
                                     </div>
                                     <div>
-                                        <a href="/tambahsejarah" class="btn btn-primary " id="kt_account_profile_details_submit"
+                                        <a href="/tambahpromo" class="btn btn-primary " id="kt_account_profile_details_submit"
                                             style="margin-left: 30px;">Tambah
                                             +</a>
                                     </div>
@@ -49,7 +49,7 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Deskripsi</th>
+                                                <th scope="col">Foto promo</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
 
@@ -60,12 +60,14 @@
                                             @foreach ($data as $d)
                                                 <tr>
                                                     <th>{{ $no++ }}</th>
-
-                                                    <td>{{ $d->deskripsi }}</td>
+                                                    <td>
+                                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
+                                                            style="width: 50px;">
+                                                    </td>
                                                     <td class="align-center">
                                                         <ul class="table-controls">
                                                             <li>
-                                                                <a href="/editsejarah/{{ $d->id }}" data-toggle="tooltip"
+                                                                <a href="/editpromo/{{ $d->id }}" data-toggle="tooltip"
                                                                     data-placement="top" title="Edit">
                                                                     <i class="flaticon-edit"></i>
                                                                 </a>
@@ -114,7 +116,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/deletesejarah/" + id + ""
+                        window.location = "/deletepromo/" + id + ""
                          swal("Data berhasil dihapus!", {
                            icon: "success",
                          });
@@ -128,8 +130,6 @@
         @if (Session::has('success'))
             toastr.success("{{ Session::get('success') }}")
         @endif
-    </script>
-   {{-- ck-editor-- --}}
-   @yield('ck-editor')
-    {{-- @endpush --}}
+    </script>\
+
 @endsection

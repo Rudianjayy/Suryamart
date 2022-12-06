@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\galeri;
+use App\Models\sejarah;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\SuryamartController;
@@ -16,7 +18,8 @@ use App\Http\Controllers\SuryamartController;
 */
 
 Route::get('/welcome', function () {
-    return view('welcome');
+        $galeri = galeri::count();
+        return view('welcome', compact('galeri'));
 });
 
 Route::get('/', [LandingController::class, 'landing'])->name('landing');
@@ -71,6 +74,17 @@ Route::post('/sliderproses5', [SuryamartController::class, 'sliderproses5'])->na
 Route::get('/editslider/{id}', [SuryamartController::class, 'editslider'])->name('editslider');
 Route::post('/editslider5/{id}', [SuryamartController::class, 'editslider5'])->name('editslider5');
 Route::get('/deleteslider/{id}', [SuryamartController::class, 'deleteslider'])->name('deleteslider');
+
+
+//Promo
+
+Route::get('/promo', [SuryamartController::class, 'promo'])->name('promo');
+Route::get('/adminpromo', [SuryamartController::class, 'adminpromo'])->name('adminpromo');
+Route::get('/tambahpromo', [SuryamartController::class, 'tambahpromo'])->name('tambahpromo');
+Route::post('/promoproses3', [SuryamartController::class, 'promoproses3'])->name('promoproses3');
+Route::get('/editpromo/{id}', [SuryamartController::class, 'editpromo'])->name('editpromo');
+Route::post('/promosubmit3/{id}', [SuryamartController::class, 'promosubmit3'])->name('promosubmit3');
+Route::get('/deletepromo/{id}', [SuryamartController::class, 'deletepromo'])->name('deletepromo');
 
 
 

@@ -170,7 +170,7 @@
 
                             <!-- mini-cart -->
                             <!-- Mobile Menu Button -->
-                        
+
                         </div>
                     </div>
                 </div>

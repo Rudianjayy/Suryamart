@@ -6,7 +6,7 @@
 <div id="content" class="main-content">
 
         <body>
-            <h1 style="color: black;" class="text-center mb-4">Tambah Sejarah</h1>
+            <h1 style="color: black;" class="text-center mb-4">Tambah Promo</h1>
 
             <div class="container" mb-5>
 
@@ -14,26 +14,17 @@
                     <div class="col-8">
                         <div class="card">
                             <div class="card-body">
-                                <form action="/sejarahproses2" method="POST" enctype="multipart/form-data">
+                                <form action="/promoproses3" method="POST" enctype="multipart/form-data">
                                     @csrf
 
-                                    <section style="padding-top:60px;">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            Deskripsi
-                                                        </div>
-                                                        <div class="card-body">
-                                                            {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                            <textarea name="deskripsi" id="task-textarea"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Foto promo :</label>
+                                        <input type="file" name="foto" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
+                                        @error('foto')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
 
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                     <a href="/adminsejarah" class="btn btn-danger">Kembali</a>
@@ -60,7 +51,7 @@
                 integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
             </script>
             <script src="https://cdn.tiny.cloud/1/z3vshivvjuw47heg0vg12ouq5rr8i7ckkxmmjadvrhgsynq8/tinymce/6/tinymce.min.js"
-            referrerpolicy="origin"></script>
+                referrerpolicy="origin"></script>
 
             <script>
                 tinymce.init({
@@ -70,13 +61,12 @@
             <!-- Option 2: Separate Popper and Bootstrap JS -->
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
-    @yield('scripts')
+                integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+                integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+            </script>
+
             <script>
                 const selection = document.getElementById('matkul')
                 selection.onchange = function(e) {
@@ -89,16 +79,5 @@
 
     </div>
 </div>
-
-@endsection
-
-@section('scripts')
-<script>
-        ClassicEditor
-            .create( document.querySelector( '#task-textarea' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-</script>
 
 @endsection

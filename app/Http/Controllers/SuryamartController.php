@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\promo;
 use App\Models\galeri;
 use App\Models\Slider;
 use App\Models\Katalog;
@@ -91,9 +92,9 @@ class SuryamartController extends Controller
     public function hubungikami() {
         return view('hubungikami.hubungikami');
     }
-    public function promo() {
-        return view('promokatalog.promo');
-    }
+    // public function promo() {
+    //     return view('promokatalog.promo');
+    // }
 
 
     public function sejarah() {
@@ -427,6 +428,77 @@ class SuryamartController extends Controller
     }
 
 
+
+
+
+
+    public function promo() {
+        $promo = promo::all();
+        return view('promo.promo',compact('promo'));
+    }
+    public function adminpromo() {
+        $data = promo::all();
+        return view('promo.adminpromo', compact('data'));
+    }
+    public function tambahpromo()
+    {
+        return view('promo.tambahpromo');
+    }
+
+    public function promoproses3(Request $request){
+        // dd($request->all());
+        $this->validate($request,[
+            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+        ],[
+            'foto.required' =>'Harus diisi',
+            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+
+        ]);
+        $data = promo::create([
+            'foto' =>$request->foto,
+        ]);
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect()->route('adminpromo')->with('success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function editpromo($id){
+
+        $data = promo::findOrFail($id);
+        return view('promo.editpromo', compact('data'));
+    }
+
+    public function editpromo5(Request $request, $id){
+        $this->validate($request,[
+            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+        ],[
+            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+
+        ]);
+        $data = promo::find($id);
+        $data->update([
+            'foto' =>$request->foto,
+
+        ]);
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect('adminpromo')->with('success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function deletepromo($id){
+        $data = promo::find($id);
+        $data->delete();
+        return redirect('adminpromo')->with('success',' Data Berhasil di Hapus!');
+    }
 
 
 

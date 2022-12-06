@@ -6,7 +6,7 @@
 </head>
 
     <body>
-        <h1 style="color: black;" class="text-center mb-4">Edit Sejarah</h1>
+        <h1 style="color: black;" class="text-center mb-4">Edit Promo</h1>
 
         <div class="container">
 
@@ -14,14 +14,16 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editproses2/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editsubmit3/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi">{{ $data->deskripsi }}</textarea>
-
-                                    @error('deskripsi')
+                                    <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
+                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
+                                        style="width: 70px">
+                                    <input type="file" name="foto" class="form-control" id="foto"
+                                        aria-describedby="emailHelp" value="{{ $data->foto }}">
+                                    @error('foto')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
